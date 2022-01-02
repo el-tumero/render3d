@@ -11,12 +11,12 @@ Simple boilderplate for creating TypeScript project in fast way.
 1. Clone it from repo.
 
 ```bash
-git clone https://github.com/el-tumero/typescript-template.git typescript-template
+git clone https://github.com/el-tumero/typescript-template.git project-name
 ```
 
 2. Install dependecies.
 ```bash
-cd typescript-template
+cd project-name
 yarn install
 ```
 
