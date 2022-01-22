@@ -29,7 +29,7 @@ class Matrix{
 
     add(this: Matrix, other: Matrix): Matrix{
         if(this.rowsCount !== other.rowsCount || this.columnsCount !== other.columnsCount){
-            throw new Error('Dimensions of the matricies do not match!')
+            throw new Error('Dimensions of the matrices do not match!')
         }
         let res:Array<Array<number>> = []
 
@@ -44,7 +44,7 @@ class Matrix{
 
     mult(this: Matrix, other: Matrix): Matrix{
         if(this.columnsCount !== other.rowsCount){
-            throw new Error('Dimensions of the matricies do not match!')
+            throw new Error('Dimensions of the matrices do not match!')
         }
         let res:Array<Array<number>> = []
 
@@ -59,6 +59,14 @@ class Matrix{
             }
         }
         return new Matrix(res)
+    }
+
+    multS(this: Matrix, scalar: number): void{
+        for(let i=0; i<this.rowsCount; i++){
+            for(let j=0; j<this.rows[i].length; j++){
+                this.rows[i][j] = this.rows[i][j] * scalar
+            }
+        }
     }
 }
 
